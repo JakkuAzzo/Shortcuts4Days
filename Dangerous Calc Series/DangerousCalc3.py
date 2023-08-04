@@ -10,10 +10,10 @@ print('''
       Try enter an expression like '1 + 1' :
       ''')
 
-input_str = str(input("Enter a calculation expression such as '1+1' or '2*3-4' : "))
+input_str = input("Enter a calculation expression such as '1+1' or '2*3-4' : ")
 
 try:
-    process = subprocess.run(["python3", "-c", f"{input_str}"], shell=True, capture_output=True, text=True, check=True)
+    process = subprocess.run(["python3", "-c", f"print({input_str})"], capture_output=True, text=True, check=True)
     result = process.stdout.strip()
     print(f"Result: {result}")
 except subprocess.CalledProcessError as e:
