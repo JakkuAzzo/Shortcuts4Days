@@ -1,4 +1,3 @@
-
 import pickle
 
 print('''
@@ -20,10 +19,8 @@ with open('expression.pkl', 'wb') as file:
 with open('expression.pkl', 'rb') as file:
     expression = pickle.load(file)
 
-    # Use ast.literal_eval() for safer evaluation
-    print(expression, "=", exec(expression))
+    # Use exec() for evaluation (still vulnerable)
+    result = None
+    exec(f'result = {expression}')
 
-
-
-
-  
+    print(expression, "=", result)
