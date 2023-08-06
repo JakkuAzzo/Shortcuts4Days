@@ -27,19 +27,20 @@ def create_database():
     num_records = int(input("Enter the number of records to insert: "))
 
     for i in range(num_records):
+        user_id = input("Enter user_id: ")
         name = input("Enter name: ")
         address = input("Enter address: ")
         email = input("Enter email: ")
         phone_number = input("Enter phone number: ")
         age = int(input("Enter age: "))
         passport_number = input("Enter passport number: ")
-        print("current record contains: " + name + ", " + address + ", " + email + ", " + phone_number + ", " + str(age) + ", " + passport_number)
+        print("current record contains: " + user_id + ", " + name + ", " + address + ", " + email + ", " + phone_number + ", " + str(age) + ", " + passport_number)
         print("number of records left: ", num_records - i - 1)
 
         cursor.execute('''
-            INSERT INTO users (name, address, email, phone_number, age, passport_number)
-            VALUES (?, ?, ?, ?, ?, ?)
-        ''', (name, address, email, phone_number, age, passport_number))
+            INSERT INTO users (user_id, name, address, email, phone_number, age, passport_number)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        ''', (user_id, name, address, email, phone_number, age, passport_number))
 
     conn.commit()
     conn.close()
