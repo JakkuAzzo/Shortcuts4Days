@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guestbook</title>
+</head>
+<body>
+    <h1>Guestbook</h1>
+    <ul>
+        {% for comment in guestbook %}
+            <li>{{ comment }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Leave a comment:</h2>
+    <form action="/post_comment" method="post">
+        <textarea name="comment"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

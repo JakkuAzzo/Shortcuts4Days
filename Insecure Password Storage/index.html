@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Insecure Website</title>
+    <style>
+        /* ... Existing styles ... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Insecure Website</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/signup">Signup</a>
+        <a href="/login">Login</a>
+    </nav>
+    <div class="container">
+        <h2>About This Site</h2>
+        <p>This is an interactive web application showcasing insecure practices. Don't use these techniques in real projects!</p>
+        <img src="https://picsum.photos/200/300" alt="Image 1 from 2021">
+        <img src="https://picsum.photos/250/350" alt="Image 2 from 2021">
+    </div>
+    
+    <!-- Signup Form -->
+    <div class="container">
+        <h2>Signup</h2>
+        <form action="/signup" method="post">
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>
